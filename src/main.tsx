@@ -9,7 +9,7 @@ import 'leaflet.markercluster/dist/MarkerCluster.Default.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <BrowserRouter basename="/city-waste-system">
+    <BrowserRouter basename={import.meta.env.PROD ? '/city-waste-system' : undefined}>
       <App />
     </BrowserRouter>
   </React.StrictMode>,
